@@ -64,21 +64,21 @@
                                             </thead>
                                             <tbody>
                                                 <% if(rows.length > 0){ %>
-                                                    <% rows.forEach(customer=> { %>
+                                                    <% rows.forEach(product=> { %>
                                                         <tr>
                                                             <td>
-                                                                <%= customer.name %>
+                                                                <%= product.name %>
                                                             </td>
                                                             <td>
-                                                                <%= customer.brand %>
+                                                                <%= product.brand %>
                                                             </td>
                                                             <td>
-                                                                <%= customer.value %>
+                                                                <%= product.value %>
                                                             </td>
                                                             <td>
                                                                 <button class="btn btn-warning"
-                                                                    onclick="window.location.href='<%= `/produto/edit/${customer.id}` %>'">Editar</button>
-                                                                <form action="/produto/delete/<%= customer.id %>"
+                                                                    onclick="window.location.href='<%= `/produto/edit/${product.id}` %>'">Editar</button>
+                                                                <form action="/produto/delete/<%= product.id %>"
                                                                     method="post" style="display:inline;">
                                                                     <button type="submit"
                                                                         class="btn btn-danger">Excluir</button>
@@ -88,7 +88,7 @@
                                                         <% }); } else {%>
                                             <tbody>
                                                 <tr>
-                                                    <td colspan="4"><b>Nenhum produto encontrado!</b></td>
+                                                    <td colspan="4"><b>Você não possui produtos!</b></td>
                                                 </tr>
                                             </tbody>
                                             <% } %>

@@ -28,28 +28,40 @@
                             <%- include('partials/topo') %>
 
                                 <!-- Begin Page Content -->
-                                <div class="container mt-5">
-                                    <h1>Editar Cliente</h1>
-                                    <form action="/cliente/update/<%= customer.id %>" method="post">
+                                <div class="container-fluid">
+                                    <h2>Cadastrar Cliente</h2>
+                                    <form method="POST" action="/cliente/update/<%= customer.id %>">
                                         <div class="form-group">
-                                            <label for="name">Nome</label>
+                                            <label for="nome">Nome do cliente:</label>
                                             <input type="text" class="form-control" id="name" name="name"
                                                 value="<%= customer.name %>" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="brand">Marca</label>
-                                            <input type="text" class="form-control" id="brand" name="brand"
-                                                value="<%= customer.brand %>" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="value">Valor</label>
-                                            <input type="text" class="form-control" id="value" name="value"
-                                                value="<%= customer.value %>" required>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Salvar</button>
-                                    </form>
-                                </div>
 
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="preco">CPF:</label>
+                                            <input class="form-control" id="cpf" name="cpf" value="<%= customer.cpf %>"
+                                                onkeypress="$(this).mask('000.000.000-00');" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="marca">Endereço:</label>
+                                            <input type="text" class="form-control" id="address" name="address"
+                                                value="<%= customer.address %>" required>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label for="marca">Telefone:</label>
+                                            <input type="text" class="form-control" id="phone" name="phone"
+                                                value="<%= customer.phone %>"
+                                                onkeypress="$(this).mask('(00) 0000-00009')" required>
+                                        </div>
+
+                                        <button class="btn btn-success" type="submit">Salvar</button>
+
+                                    </form>
+
+                                </div>
 
                         </div>
                     </div>
@@ -91,15 +103,15 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
 </body>
 
 </html>

@@ -30,23 +30,23 @@
                                 <!-- Begin Page Content -->
                                 <div class="container-fluid">
                                     <h2>Editar Produto</h2>
-                                    <form action="/produto/update/<%= customer.id %>" method="post">
+                                    <form action="/produto/update/<%= product.id %>" method="post">
                                         <div class="form-group">
                                             <label for="nome">Nome do Produto:</label>
                                             <input type="text" class="form-control" id="name" name="name"
-                                                value="<%= customer.name %>" required>
+                                                value="<%= product.name %>" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="preco">Preço:</label>
                                             <input type="text" class="form-control" id="value" name="value"
-                                                value="<%= customer.value %>" required>
+                                                value="<%= product.value %>" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="marca">Marca:</label>
                                             <input type="text" class="form-control" id="brand" name="brand"
-                                                value="<%= customer.brand %>" required>
+                                                value="<%= product.brand %>" required>
                                         </div>
 
                                         <button class="btn btn-success" type="submit">Salvar</button>
